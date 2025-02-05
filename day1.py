@@ -62,8 +62,106 @@
 #         print("inner =",j)
 # print("Rest")
 
-for i in range(10):
-    if(i==5):
-        continue
-    print(i)
-print("rest")
+# for i in range(10):
+#     if(i==5):
+#         continue
+#     print(i)
+# print("rest")
+
+
+
+# str = "Krushna"
+# a =len(str)
+# for i in range(a-1, -1, -1):
+#     print(str[i], end="")
+
+# str1 = "racecer"
+# b = len(str1)
+# a =""
+# for i in range(b-1,-1,-1):
+#    a += str1[i]
+
+# if str1 == a:
+#     print("It is palindrome")
+# else:
+#     print("Not palindrome")
+
+# s = " 7hello eve das cad qdwq-hey "
+# b = s.title()
+# c = s.upper()
+# e = s.islower()
+# f = s.isupper()
+# d = s.lower()
+# print(b,c,d,e,f,s.lstrip(),s.rstrip(),s.split("-"))
+
+# n = ("Hello", "," , "How", "Are" , "You", "?")
+# a = "".join(n)
+# print(n)
+# print(a)
+
+
+
+#function for cheking Sub-string in String
+# def issubsequence(s,s1):
+#     i=0
+#     j=0
+#     while i <len(s1) and j <len(s):
+#         if s1[i]==s[j]:
+#             i+=1
+#         j+=1
+#     return i == len(s1)
+# s = "abcdefghijk"
+# s1 = "efg"
+# r = issubsequence(s,s1)
+# print(r)
+
+
+# text = "krushna"
+# if not text:
+#     print("Empty String")
+# else:
+#     for char in text.lower():
+#       if char in ("a","e","i","o","u"):
+#         print(f"{char } is vowel")
+#       elif not char.isalpha():
+#         print(f"{char} is not letter")
+#       else:
+#         print(f"{char} is a consonant ")
+
+
+# month = "Feb"
+# months = ("jan","march","may","july","Aug","oct","Dec")
+# monthss = ("april","june","sept","nov")
+# if month in months:
+#     print(f"{month} has 31 days")
+# elif month in monthss:
+#     print(f"{month} has 30 days")
+# else:
+#     print(f"{month} has 28 days"),
+
+
+# a=3
+# b=2
+# c=1
+
+# if a>b>c:
+#     print("Descending")
+# elif a<b<c:
+#     print("Ascending")
+# else:
+#     print("Not In Order")
+
+def is_leap(year):
+    leap = False
+    
+    # Write your logic here
+    if year % 4 == 0:
+        if year % 100 == 0:
+            if year %400 == 0:
+                leap = True
+        else:
+            leap = True
+    return leap
+
+year = int(input())
+print(is_leap(year))
