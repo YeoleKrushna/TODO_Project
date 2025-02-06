@@ -79,13 +79,100 @@ a = [10,20,-12,"HELLO"]
 # else:
 #     print(d, "is greater number")
 
-list1 = ['8','6','3','4','5','6','6']
-list2 = ['2','3','5','6','7','8','9']
-print(list1)
-print(list2)
-a = list((map(int,list1)))
-b = list((map(int,list2)))
-print(a)
-print(b)
+# list1 = ['8','6','3','4','5','6','6']
+# list2 = ['2','3','5','6','7','8','9']
+# print(list1)
+# print(list2)
+# a = list((map(int,list1)))
+# b = list((map(int,list2)))
+# print(a)
+# print(b)
 
+# a = [12,34,56,78,12,56,12]
+# c = [12,34,56,78,12,56,12]
+# a.reverse()
+# print(a)
+
+# a.index()
+# print(a)
+
+# b = a.count(12)
+# print(b)
+
+# a.sort()
+# print(a)
+
+# a.clear()
+# print(a)
+# n = c[:5]
+# for i in n:
+#     print(i)
+# print(n)
+
+# e = [12,34,56,78,12,56,12,[12,45,67,[10,80]]]
+# c = e[-1][-1][-2]
+# print(c)
+
+#Concatination of list
+# a = [12,23,45]
+# b = [34,65,76]
+# r = a+b
+# c = a*3
+# print(r)
+# print(c)
+
+#List Alliasing
+# d = a
+# print(a)
+# print(d)
+# a[1]=30
+# print(a)
+# print(d)
+
+#only add element in b list which are unique/not repeated
+# a = [5,4,3,5,3,9,8,7,6,7]
+# b = []
+# for element in a:
+#     if a.count(element)>1:
+#         pass
+#     else:
+#         b.append(element)
+# print(b)
+
+#Nested List modification
+# a = [[10,20,21],[34,29,[56,87]]]
+# print("List Before Modi:",a)
+# a[0][0] = 70
+# a[1][2][0] = 30
+# print("List After Modi:",a)
+
+
+#Q) print the name of the studnets which have second lowest marks
+names_score = [['a',10],['b',20],['c',10],
+               ['d',50],['e',40],['f',20]]
+scores=[]
+for students in names_score:
+    scores.append(students[1])
+
+# [10,20,10,50,40,20]
+sorted_scores = sorted(set(scores))
+# [10,20,40,50 ]
+second_lowest = sorted_scores[1]
+# [20]
+
+names_second_lowest = []
+for students in names_score:
+    if students[1] == second_lowest:
+        names_second_lowest.append(students[0])
+
+print(sorted(names_second_lowest))
+
+second_highest = sorted_scores[-2]
+
+names_second_highest = []
+for students in names_score:
+    if students[1] == second_highest:
+        names_second_highest.append(students[0])
+
+print(sorted(names_second_highest))
 
