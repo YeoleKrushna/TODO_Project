@@ -35,7 +35,7 @@ const Todo = () => {
 
   // Delete a todo from the API
   const deleteTodo = async (id) => {
-    await axios.delete('http://127.0.0.1:8000/todos/${id}/');
+    await axios.delete(`http://127.0.0.1:8000/api/todos/${id}/`);
     fetchTodos();
 };
 
